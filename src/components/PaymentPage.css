@@ -1,0 +1,334 @@
+/* src/components/PaymentPage.css */
+
+.payment-page-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.payment-header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.payment-header h1 {
+    color: #333;
+    margin-bottom: 0;
+}
+
+.payment-header .back-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #6c757d;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.payment-header .back-button:hover {
+    background-color: #5a6268;
+}
+
+.payment-options-section { /* NEW/MODIFIED section for the options container */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.payment-tabs { /* NEW */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+.payment-tabs .tab-button { /* NEW */
+    background-color: #f0f0f0;
+    color: #555;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 2px solid transparent;
+}
+
+.payment-tabs .tab-button:hover { /* NEW */
+    background-color: #e0e0e0;
+}
+
+.payment-tabs .tab-button.active { /* NEW */
+    background-color: #4CAF50;
+    color: white;
+    border-bottom: 2px solid #4CAF50;
+    font-weight: bold;
+}
+
+.tab-content { /* NEW */
+    padding: 20px 0;
+    text-align: left;
+}
+
+.payment-method-panel h2 { /* NEW */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* Common input group styles - NEW */
+.input-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.input-group label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group input[type="text"]:focus,
+.input-group select:focus {
+    border-color: #4CAF50;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+
+/* UPI Section Specific Styles - NEW */
+.upi-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.upi-app-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #333;
+    transition: all 0.2s ease;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.upi-app-button img {
+    height: 30px;
+    width: auto;
+    margin-bottom: 5px;
+}
+
+.upi-app-button:hover {
+    background-color: #f5f5f5;
+    border-color: #c9c9c9;
+    transform: translateY(-2px);
+}
+
+.verify-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.verify-button:hover {
+    background-color: #45a049;
+}
+
+
+/* Wallets Section Specific Styles - NEW */
+.wallet-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #333;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wallet-button img {
+    height: 25px;
+    width: auto;
+}
+
+.wallet-button:hover {
+    background-color: #f5f5f5;
+    border-color: #c9c9c9;
+    transform: translateX(5px);
+}
+
+
+/* Cards Section Specific Styles - NEW */
+.card-input-group {
+    margin-bottom: 15px;
+}
+
+.card-expiry-cvv-group {
+    display: flex;
+    gap: 15px;
+}
+
+.card-expiry-cvv-group .input-group {
+    flex: 1;
+}
+
+/* Net Banking Specific Styles - NEW */
+.note-text {
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* COD Specific Styles - NEW */
+.cod-info-text {
+    font-size: 1.1em;
+    color: #555;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+.payment-footer {
+    width: 90%;
+    max-width: 800px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    text-align: center;
+}
+
+.confirm-payment-button {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin-top: 10px;
+}
+
+.confirm-payment-button:hover {
+    background-color: #218838;
+}
+
+/* NEW: Styles for displaying total amount */
+.total-amount-display {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px; /* Space between total and button */
+}
+
+.total-amount-display span {
+    color: #4CAF50; /* Green color for the actual amount */
+}
+
+/* Responsive Adjustments - NEW */
+@media (max-width: 600px) {
+    .payment-tabs {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .payment-tabs .tab-button {
+        border-radius: 5px;
+        justify-content: center;
+    }
+
+    .card-expiry-cvv-group {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .upi-options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .upi-app-button, .wallet-button {
+        width: 80%;
+        max-width: 250px;
+    }
+}
